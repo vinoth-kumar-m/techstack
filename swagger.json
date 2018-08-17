@@ -1,0 +1,87 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Hyperledger Explorer REST API Swagger",
+        "description": "Rest API for fabric .",
+        "version": "1.0.0",
+        "contact": {
+            "name": "Hyperledger Team",
+            "email": ""
+        }
+    },
+    "host": "localhost:8080",
+    "schemes": [
+        "http"
+    ],
+    "basePath": "/api",
+    "produces": [
+        "application/json"
+    ],
+    "tags": [
+        {
+            "name": "Users",
+            "description": "Everything about users"
+        }
+    ],
+    "paths": {
+        "/userAuthenticate": {
+            "post": {
+                "tags": [
+                    "UserAuthenticate"
+                ],
+                "summary": "Authenticate user credentials",
+                "description": "Authenticate user credentials",
+                "consumes": [
+                    "application/json",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "formData",
+                        "description": "Username",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "description": "Password",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Error": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
