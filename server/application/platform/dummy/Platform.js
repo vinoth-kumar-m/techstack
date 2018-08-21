@@ -84,7 +84,6 @@ class Platform {
                     createdt: "4-26-2018 4:32 PM EDT",
                     creator: "Org1MSP",
                     endorser_msp_id: "{'Org1MSP'}",
-                    id: 41,
                     read_set: [],
                     status: 200,
                     txhash:
@@ -101,7 +100,6 @@ class Platform {
                     createdt: "4-26-2018 4:32 PM EDT",
                     creator: "Org1MSP",
                     endorser_msp_id: "{'Org1MSP'}",
-                    id: 40,
                     read_set: [],
                     status: 200,
                     txhash:
@@ -118,7 +116,6 @@ class Platform {
                     createdt: "4-26-2018 4:32 PM EDT",
                     creator: "Org1MSP",
                     endorser_msp_id: "{'Org1MSP'}",
-                    id: 39,
                     read_set: [],
                     status: 200,
                     txhash:
@@ -135,7 +132,6 @@ class Platform {
                     createdt: "4-26-2018 4:32 PM EDT",
                     creator: "Org1MSP",
                     endorser_msp_id: "{'Org1MSP'}",
-                    id: 41,
                     read_set: [],
                     status: 200,
                     txhash:
@@ -152,7 +148,6 @@ class Platform {
                     createdt: "4-26-2018 4:32 PM EDT",
                     creator: "Org1MSP",
                     endorser_msp_id: "{'Org1MSP'}",
-                    id: 40,
                     read_set: [],
                     status: 200,
                     txhash:
@@ -169,7 +164,6 @@ class Platform {
                     createdt: "4-26-2018 4:32 PM EDT",
                     creator: "Org1MSP",
                     endorser_msp_id: "{'Org1MSP'}",
-                    id: 39,
                     read_set: [],
                     status: 200,
                     txhash:
@@ -186,7 +180,6 @@ class Platform {
                     createdt: "4-26-2018 4:32 PM EDT",
                     creator: "Org1MSP",
                     endorser_msp_id: "{'Org1MSP'}",
-                    id: 41,
                     read_set: [],
                     status: 200,
                     txhash:
@@ -203,7 +196,6 @@ class Platform {
                     createdt: "4-26-2018 4:32 PM EDT",
                     creator: "Org1MSP",
                     endorser_msp_id: "{'Org1MSP'}",
-                    id: 40,
                     read_set: [],
                     status: 200,
                     txhash:
@@ -220,7 +212,6 @@ class Platform {
                     createdt: "4-26-2018 4:32 PM EDT",
                     creator: "Org1MSP",
                     endorser_msp_id: "{'Org1MSP'}",
-                    id: 39,
                     read_set: [],
                     status: 200,
                     txhash:
@@ -237,7 +228,6 @@ class Platform {
                     createdt: "4-26-2018 4:32 PM EDT",
                     creator: "Org1MSP",
                     endorser_msp_id: "{'Org1MSP'}",
-                    id: 41,
                     read_set: [],
                     status: 200,
                     txhash:
@@ -254,7 +244,6 @@ class Platform {
                     createdt: "4-26-2018 4:32 PM EDT",
                     creator: "Org1MSP",
                     endorser_msp_id: "{'Org1MSP'}",
-                    id: 40,
                     read_set: [],
                     status: 200,
                     txhash:
@@ -271,7 +260,6 @@ class Platform {
                     createdt: "4-26-2018 4:32 PM EDT",
                     creator: "Org1MSP",
                     endorser_msp_id: "{'Org1MSP'}",
-                    id: 39,
                     read_set: [],
                     status: 200,
                     txhash:

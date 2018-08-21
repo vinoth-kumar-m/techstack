@@ -53,8 +53,8 @@ const Sidebar = ({ ...props }) => {
                 {typeof prop.icon === "string" ? (
                   <Icon>{prop.icon}</Icon>
                 ) : (
-                  <prop.icon />
-                )}
+                    <prop.icon />
+                  )}
               </ListItemIcon>
               <ListItemText
                 primary={prop.sidebarName}
@@ -79,51 +79,29 @@ const Sidebar = ({ ...props }) => {
   );
   return (
     <div>
-      <Hidden mdUp implementation="css">
-        <Drawer
-          variant="temporary"
-          anchor="right"
-          open={props.open}
-          classes={{
-            paper: classes.drawerPaper
-          }}
-          onClose={props.handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true // Better open performance on mobile.
-          }}
-        >
-          {brand}
-          <div className={classes.sidebarWrapper}>
-            <HeaderLinks />
-            {links}
-          </div>
-          {image !== undefined ? (
-            <div
-              className={classes.background}
-              style={{ backgroundImage: "url(" + image + ")" }}
-            />
-          ) : null}
-        </Drawer>
-      </Hidden>
-      <Hidden smDown implementation="css">
-        <Drawer
-          anchor="left"
-          variant="permanent"
-          open
-          classes={{
-            paper: classes.drawerPaper
-          }}
-        >
-          {brand}
-          <div className={classes.sidebarWrapper}>{links}</div>
-          {image !== undefined ? (
-            <div
-              className={classes.background}
-              style={{ backgroundImage: "url(" + image + ")" }}
-            />
-          ) : null}
-        </Drawer>
-      </Hidden>
+      <Drawer
+        variant="temporary"
+        anchor="left"
+        open={props.open}
+        classes={{
+          paper: classNames(classes.drawerPaper, !props.open && classes.drawerPaperClose),
+        }}
+        onClose={props.handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true // Better open performance on mobile.
+        }}
+      >
+        {brand}
+        <div className={classes.sidebarWrapper}>
+          {links}
+        </div>
+        {image !== undefined ? (
+          <div
+            className={classes.background}
+            style={{ backgroundImage: "url(" + image + ")" }}
+          />
+        ) : null}
+      </Drawer>
     </div>
   );
 };

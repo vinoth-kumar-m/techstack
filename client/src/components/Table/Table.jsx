@@ -25,10 +25,6 @@ class CustomTable extends React.Component {
     };
   }
 
-  createSortHandler = property => event => {
-    this.handleRequestSort(event, property);
-  };
-
   handleRequestSort = (event, property) => {
     const orderBy = property;
     let order = 'desc';
@@ -36,6 +32,10 @@ class CustomTable extends React.Component {
       order = 'asc';
     }
     this.setState({ order, orderBy });
+  };
+
+  createSortHandler = property => event => {
+    this.handleRequestSort(event, property);
   };
 
   handleClick = (event, id) => {

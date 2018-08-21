@@ -29,7 +29,6 @@ class UITable extends React.Component {
     render() {
         const { classes, transactions } = this.props;
         const transactionsLoaded = transactions ? true : false;
-        console.log("Transactions: ", transactions, "Header: ", header);
         if (!transactionsLoaded) {
             return (<CircularProgress className={classes.progress} />);
         }

@@ -199,10 +199,10 @@ class UIChart extends React.Component {
                         </Card>}
                 </GridItem>
                 <GridItem xs={12} sm={12} md={4}>
-                    <Card chart>
-                        <CardHeader color="warning">
-                            {!txnPerMinLoaded && <CircularProgress className={classes.progress} />}
-                            {txnPerMinLoaded &&
+                    {!txnPerMinLoaded && <CircularProgress className={classes.progress} />}
+                    {txnPerMinLoaded &&
+                        <Card chart>
+                            <CardHeader color="warning">
                                 <ChartistGraph
                                     className="ct-chart"
                                     data={this.getChartData(txnPerMin.rows)}
@@ -210,50 +210,49 @@ class UIChart extends React.Component {
                                     options={txnsPerMinChart.options}
                                     responsiveOptions={txnsPerMinChart.responsiveOptions}
                                     listener={txnsPerMinChart.animation}
-                                />}
-                        </CardHeader>
-                        <CardBody>
-                            <h4 className={classes.cardTitle}>Transactions Per Minute</h4>
-                            <p className={classes.cardCategory}>
-                                <span className={classes.successText}>
-                                    <ArrowDownward className={classes.upArrowCardCategory} /> 20%
+                                />
+                            </CardHeader>
+                            <CardBody>
+                                <h4 className={classes.cardTitle}>Transactions Per Minute</h4>
+                                <p className={classes.cardCategory}>
+                                    <span className={classes.successText}>
+                                        <ArrowDownward className={classes.upArrowCardCategory} /> 20%
                   </span>{" "}
-                                lower compared to last hour.
+                                    lower compared to last hour.
                 </p>
-                        </CardBody>
-                        <CardFooter chart>
-                            <div className={classes.stats}>
-                                <AccessTime /> updated 10 minutes ago
+                            </CardBody>
+                            <CardFooter chart>
+                                <div className={classes.stats}>
+                                    <AccessTime /> updated 10 minutes ago
                 </div>
-                        </CardFooter>
-                    </Card>
+                            </CardFooter>
+                        </Card>}
                 </GridItem>
                 <GridItem xs={12} sm={12} md={4}>
-                    <Card chart>
-                        <CardHeader>
-                            {!txnPerOrgLoaded && <CircularProgress className={classes.progress} />}
-                            {txnPerOrgLoaded &&
+                    {!txnPerOrgLoaded && <CircularProgress className={classes.progress} />}
+                    {txnPerOrgLoaded &&
+                        <Card chart>
+                            <CardHeader>
                                 <ChartistGraph
                                     className="ct-chart"
                                     data={this.getPieData(txnPerOrg.rows)}
                                     type="Pie"
                                 />
-                            }
-                        </CardHeader>
-                        <CardBody>
-                            <h4 className={classes.cardTitle}>Transactions Per Organization</h4>
-                            <p className={classes.cardCategory}>
-                                <span className={classes.successText}>
-                                    {" "}
-                                </span>
-                            </p>
-                        </CardBody>
-                        <CardFooter chart>
-                            <div className={classes.stats}>
-                                <AccessTime /> updated 5 hours ago
+                            </CardHeader>
+                            <CardBody>
+                                <h4 className={classes.cardTitle}>Transactions Per Organization</h4>
+                                <p className={classes.cardCategory}>
+                                    <span className={classes.successText}>
+                                        {" "}
+                                    </span>
+                                </p>
+                            </CardBody>
+                            <CardFooter chart>
+                                <div className={classes.stats}>
+                                    <AccessTime /> updated 5 hours ago
                 </div>
-                        </CardFooter>
-                    </Card>
+                            </CardFooter>
+                        </Card>}
                 </GridItem>
             </GridContainer>
         );
